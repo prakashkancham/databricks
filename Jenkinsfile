@@ -6,7 +6,6 @@ node {
   def JQPATH        = "/usr/bin"
   def JOBPREFIX     = "jenkins_demo"
   def BUNDLETARGET  = "dev"
-  def GITBRANCH     = "master"
 
   stage('Checkout') {
     git branch: GITBRANCH, url: GITREPOREMOTE
