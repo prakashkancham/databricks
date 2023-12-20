@@ -6,10 +6,12 @@ node {
   def JQPATH        = "/usr/bin"
   def JOBPREFIX     = "jenkins_demo"
   def BUNDLETARGET  = "dev"
+  def GITBRANCH     = "master"
 
   stage('Checkout') {
     git branch: GITBRANCH, url: GITREPOREMOTE
   }
+
   stage('Validate Bundle') {
     sh """#!/bin/bash
           ${DBCLIPATH}/databricks bundle validate -t ${BUNDLETARGET}
