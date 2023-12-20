@@ -5,7 +5,7 @@ import dabdemo
 
 setup(
   name = "dabdemo",
-  version = dabdemo.__1.0__,
+  version = dabdemo.__0.1__,
   author = dabdemo.__author__,
   url = "https://<my-url>",
   author_email = "<my-author-name>@<my-organization>",
