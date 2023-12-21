@@ -21,11 +21,11 @@ node {
           ${DBCLIPATH}/databricks bundle deploy -t ${BUNDLETARGET}
        """
   }
-  // stage('Run Unit Tests') {
-  //   sh """#!/bin/bash
-  //         ${DBCLIPATH}/databricks bundle run -t ${BUNDLETARGET} run-unit-tests
-  //      """
-  // }
+  stage('Run Unit Tests') {
+    sh """#!/bin/bash
+          ${DBCLIPATH}/databricks bundle run -t ${BUNDLETARGET} run-unit-tests
+       """
+  }
   stage('Run Notebook') {
     sh """#!/bin/bash
           ${DBCLIPATH}/databricks bundle run -t ${BUNDLETARGET} run-dabdemo-notebook
@@ -49,7 +49,7 @@ node {
 
     sh """#!/bin/bash
           ${DBCLIPATH}/databricks workspace export-dir \
-          ${DATABRICKS_BUNDLE_WORKSPACE_ROOT_PATH}/files/Validation/Output/test-results \
+          ${DATABRICKS_BUNDLE_WORKSPACE_ROOT_PATH}/Validation/Output/test-results \
           ${WORKSPACE}/Validation/Output/test-results \
           -t ${BUNDLETARGET} \
           --overwrite
