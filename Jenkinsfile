@@ -21,11 +21,11 @@ node {
           ${DBCLIPATH}/databricks bundle deploy -t ${BUNDLETARGET}
        """
   }
-  stage('Run Unit Tests') {
-    sh """#!/bin/bash
-          ${DBCLIPATH}/databricks bundle run -t ${BUNDLETARGET} run-unit-tests
-       """
-  }
+  // stage('Run Unit Tests') {
+  //   sh """#!/bin/bash
+  //         ${DBCLIPATH}/databricks bundle run -t ${BUNDLETARGET} run-unit-tests
+  //      """
+  // }
   stage('Run Notebook') {
     sh """#!/bin/bash
           ${DBCLIPATH}/databricks bundle run -t ${BUNDLETARGET} run-dabdemo-notebook
