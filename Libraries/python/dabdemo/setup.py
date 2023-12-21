@@ -5,7 +5,7 @@ import dabdemo
 
 setup(
   name = "dabdemo",
-  version = dabdemo.0.1.0,
+  version = dabdemo0.1.0,
   author = dabdemo.prakash,
   url = "https://github.com/prakashkancham/databricks.git",
   author_email = "<my-author-name>@<my-organization>",
