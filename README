@@ -1,4 +1,4 @@
-65.0.106.123
+3.108.234.235
 
 Jenkins
 
@@ -25,8 +25,8 @@ https://docs.databricks.com/en/administration-guide/workspace/quick-start.html
 
 access token:
 
-dbtoken
-dapibddf5d3548fe371d02e6cb0b6100855a
+token
+dapi33afb76e302240c9e9fa40b908edce7d
 
 
 Git:
