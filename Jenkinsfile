@@ -7,20 +7,20 @@ node {
   def JOBPREFIX     = "jenkins_demo"
   def BUNDLETARGET  = "dev"
 
-  stage('Checkout') {
-    git branch: GITBRANCH, url: GITREPOREMOTE
-  }
+  // stage('Checkout') {
+  //   git branch: GITBRANCH, url: GITREPOREMOTE
+  // }
 
-  stage('Validate Bundle') {
-    sh """#!/bin/bash
-          ${DBCLIPATH}/databricks bundle validate -t ${BUNDLETARGET}
-       """
-  }
-  stage('Deploy Bundle') {
-    sh """#!/bin/bash
-          ${DBCLIPATH}/databricks bundle deploy -t ${BUNDLETARGET}
-       """
-  }
+  // stage('Validate Bundle') {
+  //   sh """#!/bin/bash
+  //         ${DBCLIPATH}/databricks bundle validate -t ${BUNDLETARGET}
+  //      """
+  // }
+  // stage('Deploy Bundle') {
+  //   sh """#!/bin/bash
+  //         ${DBCLIPATH}/databricks bundle deploy -t ${BUNDLETARGET}
+  //      """
+  // }
   // stage('Run Unit Tests') {
   //   sh """#!/bin/bash
   //         ${DBCLIPATH}/databricks bundle run -t ${BUNDLETARGET} run-unit-tests
