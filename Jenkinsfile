@@ -48,6 +48,7 @@ node {
     }
 
     sh """#!/bin/bash
+          mkdir ${DATABRICKS_BUNDLE_WORKSPACE_ROOT_PATH}/Validation/Output/test-results
           ${DBCLIPATH}/databricks workspace export-dir \
           ${DATABRICKS_BUNDLE_WORKSPACE_ROOT_PATH}/Validation/Output/test-results \
           ${WORKSPACE}/Validation/Output/test-results \
